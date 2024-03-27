@@ -1,6 +1,6 @@
 # make sure you are in the main directory of the project before you run any make cmd
 
-start_redis:
+start_redis_container:
 	@echo "Starting Docker container for Redis"
 	docker compose up
 
