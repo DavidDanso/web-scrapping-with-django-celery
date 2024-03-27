@@ -5,6 +5,11 @@ start_redis_container:
 	docker compose up
 
 
+stop_redis_container:
+	@echo "Stopping Docker container for Redis"
+	docker compose down
+
+
 start_celery_worker:
 	@echo "Starting celery worker..."
 	@$(MAKE) inner_worker
