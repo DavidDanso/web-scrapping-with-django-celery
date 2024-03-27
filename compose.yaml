@@ -4,9 +4,13 @@ services:
     image: redis
     restart: always
     ports:
-      - 6379:6379
+      - 6170:6379
     volumes:
-      - redis_data_a:/data
+      - data:/data
     entrypoint: redis-server --appendonly yes
 volumes:
-  redis_data_a:
+  data:
+
+networks:
+  default:
+    name: scrape_scheduler_network
